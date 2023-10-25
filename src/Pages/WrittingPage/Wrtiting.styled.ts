@@ -12,5 +12,5 @@ export const WritingForm = styled.form`
 `;
 
 export const WritingArea = styled.textarea`
-  
+  margin-bottom: 20px;
 `;
