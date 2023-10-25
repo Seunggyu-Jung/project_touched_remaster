@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { userState, nameState } from '../recoil';
@@ -31,8 +31,6 @@ export default function InfoPage() {
       <Link to="/write">
         <button>다음</button>
       </Link>
-      <p>User: {user}</p>
-      <p>Name: {name}</p>
     </S.InfoDiv>
   );
 }
