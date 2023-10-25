@@ -9,3 +9,8 @@ export const nameState = atom<string>({
   key: 'nameState',
   default: '',
 });
+
+export const textState = atom<string | number>({
+  key: 'textStat',
+  default: '',
+})
