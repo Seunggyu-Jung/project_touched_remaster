@@ -7,10 +7,16 @@ export const WritingDiv = styled.div`
 `;
 
 export const WritingForm = styled.form`
-  width: auto;
   margin-top: 40px;
 `;
 
 export const WritingArea = styled.textarea`
+  &:focus {
+    outline: none;
+  }
+  max-width: 400px;
+  padding: 10px;
+  resize: none;
   margin-bottom: 20px;
+  border-radius: 10px;
 `;
