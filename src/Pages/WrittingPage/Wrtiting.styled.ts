@@ -7,7 +7,7 @@ export const WritingDiv = styled.div`
 `;
 
 export const WritingForm = styled.form`
-  margin-top: 40px;
+  margin-top: 20px;
 `;
 
 export const WritingArea = styled.textarea`
@@ -15,6 +15,7 @@ export const WritingArea = styled.textarea`
     outline: none;
   }
   max-width: 400px;
+  max-height: 400px;
   padding: 10px;
   resize: none;
   margin-bottom: 20px;
