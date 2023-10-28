@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { textState } from '../recoil';
+import { textState, fontState, sizeState } from '../recoil';
 import * as S from './Wrtiting.styled';
 
 export default function WrittingPage() {
   const [text, setText] = useRecoilState(textState)
-  const [font, setFont] = useState<string>('Arial')
-  const [size, setSize] = useState<string>('12')
+  const [font, setFont] = useRecoilState<string>(fontState)
+  const [size, setSize] = useRecoilState<string>(sizeState)
 
   const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => { setFont(e.target.value) }
   const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => { setSize(e.target.value) }
