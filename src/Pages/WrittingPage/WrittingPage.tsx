@@ -54,7 +54,7 @@ export default function WrittingPage() {
       <Link to="/info">
         <button>이전</button>
       </Link>
-      <Link to="/test">
+      <Link to="/image">
         <button>다음</button>
       </Link>
 

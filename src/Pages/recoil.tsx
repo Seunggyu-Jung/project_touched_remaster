@@ -32,3 +32,9 @@ export const sizeState = atom<string>({
   default: '12',
   effects_UNSTABLE: [persistAtom]
 })
+
+export const imageState = atom<string[]>({
+  key: 'imageState',
+  default: [],
+  effects_UNSTABLE: [persistAtom]
+})
