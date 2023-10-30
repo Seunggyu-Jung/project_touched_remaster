@@ -5,6 +5,7 @@ import InfoPage from './Pages/InfoPage/InfoPage';
 import WrittingPage from './Pages/WrittingPage/WrittingPage';
 import TestPage from './Pages/TestPage/TestPage';
 import ImagePage from './Pages/ImagePage/ImagePage';
+import BackgroundPage from './Pages/BackgroundPage/BackgroundPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/write" element={<WrittingPage />}></Route>
           <Route path="/test" element={<TestPage />}></Route>
           <Route path="/image" element={<ImagePage />}></Route>
+          <Route path="/background" element={<BackgroundPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
