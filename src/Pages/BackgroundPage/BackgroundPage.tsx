@@ -8,15 +8,6 @@ import * as S from './BackgroundPage.styled'
 export default function BackgroundPage() {
   const [color, setColor] = useState("#aabbcc");
   const [colorArray, setColorArray] = useState<string[]>(['#FFC0CB', '#FFA500'])
-  const [selectImage, setSelectImage] = useState<string | null>(null);
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setSelectImage(imageUrl);
-    }
-  }
 
   const GlobalStyles = createGlobalStyle`
   body {
@@ -38,18 +29,16 @@ export default function BackgroundPage() {
       <GlobalStyles />
       <S.backgroundDiv >
         <h1>편지의 배경을 선택하는 페이지 입니다.</h1>
-        <input type="file" accept='image/*' onChange={handleImageChange} />
         <HexColorPicker color={color} onChange={setColor} />
         <button onClick={handleColorArray}>+</button>
         <button onClick={reverseColorArray}>@</button>
 
-        <Link to="/image">
+        <Link to="/">
           <button>이전</button>
         </Link>
-        <Link to="/test">
+        <Link to="/info">
           <button>다음</button>
         </Link>
-
       </S.backgroundDiv>
     </div>
   )
