@@ -25,7 +25,7 @@ export default function InfoPage() {
           onChange={(e) => setName(e.target.value)}
         />
       </form>
-      <Link to="/">
+      <Link to="/background">
         <button>이전</button>
       </Link>
       <Link to="/write">

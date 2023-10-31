@@ -43,7 +43,7 @@ export default function ImagePage() {
       <Link to="/write">
         <button>이전</button>
       </Link>
-      <Link to="/background">
+      <Link to="/test">
         <button>다음</button>
       </Link>
 
