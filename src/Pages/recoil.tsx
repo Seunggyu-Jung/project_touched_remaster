@@ -38,3 +38,15 @@ export const imageState = atom<string[]>({
   default: [],
   effects_UNSTABLE: [persistAtom]
 })
+
+export const backgroundState = atom<string[]>({
+  key: 'backgroundState',
+  default: ['#FFC0CB', '#FFA500'],
+  effects_UNSTABLE: [persistAtom]
+})
+
+export const textBackState = atom<string>({
+  key: 'textBackState',
+  default: '',
+  effects_UNSTABLE: [persistAtom]
+})

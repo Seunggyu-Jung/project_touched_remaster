@@ -7,17 +7,31 @@ export const WritingDiv = styled.div`
 `;
 
 export const WritingForm = styled.form`
+  width: 400px;
+  margin: auto;
+  justify-content: center;
   margin-top: 20px;
+
+  @media (max-width: 400px) {
+    max-width: 300px;
+  }
 `;
 
 export const WritingArea = styled.textarea`
   &:focus {
     outline: none;
   }
-  max-width: 400px;
-  max-height: 400px;
+  display: block;
+  width: 100%;
+  height: 400px;
   padding: 10px;
   resize: none;
   margin-bottom: 20px;
   border-radius: 10px;
+  background-size: contain;
+
+  @media (max-width: 400px) {
+    max-height: 300px;
+    padding: 0;
+  }
 `;
