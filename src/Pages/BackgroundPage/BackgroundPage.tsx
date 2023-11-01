@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
 import { createGlobalStyle } from 'styled-components'
 import { Link } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { backgroundState } from '../recoil';
 import * as S from './BackgroundPage.styled'
 
 
 export default function BackgroundPage() {
   const [color, setColor] = useState("#aabbcc");
-  const [colorArray, setColorArray] = useState<string[]>(['#FFC0CB', '#FFA500'])
+  const [colorArray, setColorArray] = useRecoilState(backgroundState)
 
   const GlobalStyles = createGlobalStyle`
   body {
@@ -29,16 +31,20 @@ export default function BackgroundPage() {
       <GlobalStyles />
       <S.backgroundDiv >
         <h1>편지의 배경을 선택하는 페이지 입니다.</h1>
-        <HexColorPicker color={color} onChange={setColor} />
+        <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
+          <HexColorPicker color={color} onChange={setColor} />
+        </section>
         <button onClick={handleColorArray}>+</button>
         <button onClick={reverseColorArray}>@</button>
+        <section style={{ marginTop: 20 }}>
+          <Link to="/">
+            <button>이전</button>
+          </Link>
+          <Link to="/info">
+            <button>다음</button>
+          </Link>
+        </section>
 
-        <Link to="/">
-          <button>이전</button>
-        </Link>
-        <Link to="/info">
-          <button>다음</button>
-        </Link>
       </S.backgroundDiv>
     </div>
   )
