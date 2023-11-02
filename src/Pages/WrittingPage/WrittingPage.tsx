@@ -28,7 +28,6 @@ export default function WrittingPage() {
     fontFamily: font,
     backgroundImage: `url(${selectImage})`,
     backgroundRepeat: 'no-repeat',
-    backgroundContain: 'contain',
   };
 
   return (
