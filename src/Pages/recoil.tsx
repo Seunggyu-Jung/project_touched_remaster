@@ -50,3 +50,9 @@ export const textBackState = atom<string>({
   default: '',
   effects_UNSTABLE: [persistAtom]
 })
+
+export const bgmState = atom<string>({
+  key: 'bgmState',
+  default: '',
+  effects_UNSTABLE: [persistAtom]
+})
