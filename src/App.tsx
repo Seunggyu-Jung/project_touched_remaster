@@ -7,6 +7,7 @@ import TestPage from './Pages/TestPage/TestPage';
 import ImagePage from './Pages/ImagePage/ImagePage';
 import BackgroundPage from './Pages/BackgroundPage/BackgroundPage';
 import CheckPage from './Pages/CheckPage/CheckPage';
+import BgmPage from './Pages/BgmPage/BgmPage';
 import { useRecoilValue } from 'recoil';
 import { backgroundState } from './Pages/recoil';
 import { createGlobalStyle } from 'styled-components'
@@ -22,10 +23,20 @@ function App() {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, ${background[0]} , ${background[1]});
   }
-  `
 
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, ${background[0]}, ${background[1]});
+    z-index: -1;
+  }
+
+  `
 
   return (
     <div>
@@ -39,6 +50,7 @@ function App() {
           <Route path="/image" element={<ImagePage />}></Route>
           <Route path="/background" element={<BackgroundPage />}></Route>
           <Route path="/check" element={<CheckPage />}></Route>
+          <Route path="/bgm" element={<BgmPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
