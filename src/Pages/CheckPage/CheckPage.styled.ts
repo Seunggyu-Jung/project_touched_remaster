@@ -17,7 +17,7 @@ export const textSection = styled.section`
   ::after {
     content: '';
     position: absolute;
-    bottom: -22%;
+    bottom: -18%;
     right: 15%;
     border-top: 20px solid #ffff;
     border-left: 20px solid transparent;
