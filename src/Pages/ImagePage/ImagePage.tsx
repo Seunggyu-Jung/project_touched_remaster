@@ -6,15 +6,15 @@ import { useRecoilState } from 'recoil';
 import { imageState } from '../recoil';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+
+
 export default function ImagePage() {
-  const [selectImage, setSelectImage] = useState<string | null>(null);
   const [imageArray, setImageArray] = useRecoilState<string[]>(imageState);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const imageUrl = URL.createObjectURL(file);
-      setSelectImage(imageUrl);
       setImageArray([...imageArray, imageUrl]);
     }
   }
@@ -43,7 +43,7 @@ export default function ImagePage() {
       <Link to="/write">
         <button>이전</button>
       </Link>
-      <Link to="/test">
+      <Link to="/bgm">
         <button>다음</button>
       </Link>
 

@@ -9,8 +9,6 @@ export const WritingDiv = styled.div`
 export const WritingForm = styled.form`
   width: 400px;
   margin: auto;
-  align-items: center;
-  justify-content: center;
   margin-top: 20px;
 
   @media (max-width: 500px) {
