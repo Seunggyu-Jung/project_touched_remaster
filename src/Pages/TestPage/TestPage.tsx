@@ -16,7 +16,20 @@ export default function TestPage() {
   const background = useRecoilValue(textBackState)
   const bgm = useRecoilValue(bgmState)
 
+  const handleCopyURL = () => {
+    const targetPath = '/check'
+    const githubDomain = 'https://seunggyu-jung.github.io'
+    const fullURL = githubDomain + targetPath
 
+    navigator.clipboard.writeText(fullURL)
+      .then(() => {
+        alert('편지가 잘 복사되었습니다. 받으실 분에게 보내보세요!')
+      })
+      .catch((error) => {
+        console.log('복사에 오류가 있습니다.', error)
+      })
+
+  }
 
   const textStyle = {
     fontSize: `${size}px`,
@@ -67,6 +80,7 @@ export default function TestPage() {
             }
           }}
         />
+        <button onClick={handleCopyURL}>전송</button>
       </S.testDiv>
     </S.testBody>
   );
