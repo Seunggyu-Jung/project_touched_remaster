@@ -41,7 +41,7 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<FirstPage />}></Route>
           <Route path="/info" element={<InfoPage />}></Route>
