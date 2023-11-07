@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { userState, nameState } from '../recoil';
+import Button from '../../Common/Button/Button'
 import * as S from './InfoPage.styled';
 
 export default function InfoPage() {
@@ -25,12 +26,8 @@ export default function InfoPage() {
           onChange={(e) => setName(e.target.value)}
         />
       </form>
-      <Link to="/background">
-        <button>이전</button>
-      </Link>
-      <Link to="/write">
-        <button>다음</button>
-      </Link>
+
+      <Button previousLink='/background' nextLink='/write' />
     </S.InfoDiv>
   );
 }

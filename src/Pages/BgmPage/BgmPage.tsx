@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import { bgmState } from '../recoil'
+import Button from '../../Common/Button/Button'
 import * as S from './BgmPage.styled'
 import YouTube from 'react-youtube'
 
@@ -44,12 +45,7 @@ export default function BgmPage() {
         <button onClick={handleVideoId}>업로드</button>
       </form>
 
-      <Link to="/image">
-        <button>이전</button>
-      </Link>
-      <Link to="/check">
-        <button>다음</button>
-      </Link>
+      <Button previousLink='/image' nextLink='/check' />
 
     </S.bgmDiv>
   )

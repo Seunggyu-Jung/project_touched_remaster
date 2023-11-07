@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { textState, fontState, sizeState, textBackState } from '../recoil';
+import Button from '../../Common/Button/Button'
 import * as S from './Wrtiting.styled';
 import { img1, img2, img3, img4, img5 } from '../../img/img';
 
@@ -76,13 +77,7 @@ export default function WrittingPage() {
         <S.WritingArea name="letter" cols={100} rows={30} style={writingAreaStyle} value={text} onChange={e => setText(e.target.value)} placeholder='여러분이 전하고 싶은 마음의 소리를 적어보세요'></S.WritingArea>
       </S.WritingForm>
 
-
-      <Link to="/info">
-        <button>이전</button>
-      </Link>
-      <Link to="/image">
-        <button>다음</button>
-      </Link>
+      <Button previousLink='/info' nextLink='/image' />
 
     </S.WritingDiv>
   );

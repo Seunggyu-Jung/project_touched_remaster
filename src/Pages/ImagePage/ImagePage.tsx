@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { imageState } from '../recoil';
+import Button from '../../Common/Button/Button'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 
@@ -40,12 +41,7 @@ export default function ImagePage() {
         </Carousel>
       </S.ImageSection>
 
-      <Link to="/write">
-        <button>이전</button>
-      </Link>
-      <Link to="/bgm">
-        <button>다음</button>
-      </Link>
+      <Button previousLink='/write' nextLink='/bgm' />
 
     </S.ImageDiv>
   );
