@@ -3,6 +3,7 @@ import { HexColorPicker } from 'react-colorful'
 import { createGlobalStyle } from 'styled-components'
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
+import Button from '../../Common/Button/Button';
 import { backgroundState } from '../recoil';
 import * as S from './BackgroundPage.styled'
 
@@ -34,16 +35,10 @@ export default function BackgroundPage() {
         <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
           <HexColorPicker color={color} onChange={setColor} />
         </section>
-        <button onClick={handleColorArray}>+</button>
-        <button onClick={reverseColorArray}>@</button>
-        <section style={{ marginTop: 20 }}>
-          <Link to="/">
-            <button>이전</button>
-          </Link>
-          <Link to="/info">
-            <button>다음</button>
-          </Link>
-        </section>
+        <button onClick={handleColorArray}>색 더하기</button>
+        <button onClick={reverseColorArray}>색 반전</button>
+
+        <Button previousLink='/' nextLink='/info' />
 
       </S.backgroundDiv>
     </div>
