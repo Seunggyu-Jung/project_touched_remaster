@@ -11,6 +11,7 @@ import BgmPage from './Pages/BgmPage/BgmPage';
 import { useRecoilValue } from 'recoil';
 import { backgroundState } from './Pages/recoil';
 import { createGlobalStyle } from 'styled-components'
+import ScrollToTop from './Common/ScrollToTop/ScrollToTop';
 
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<FirstPage />}></Route>
           <Route path="/info" element={<InfoPage />}></Route>
