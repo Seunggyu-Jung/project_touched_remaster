@@ -29,3 +29,23 @@ export const textSection = styled.section`
 export const guideImg = styled.img`
   transition: opacity 1s ease-in-out;
 `;
+
+export const BtnSection = styled.section`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+`;
+
+export const falseText = styled.section`
+  max-width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #ffff;
+`;
+
+export const answerAgian = styled.button`
+  border: 0;
+  background-color: transparent;
+`;

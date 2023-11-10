@@ -19,6 +19,7 @@ export default function CheckPage() {
   const handleTrue = () => {
     setDefaultImg(guide2)
     setDefaultText(false)
+    setFalseText(false)
     setTrueText(true)
     setBtnAble('auto')
   }
@@ -54,11 +55,17 @@ export default function CheckPage() {
         <S.guideImg src={defaultImg} alt="" />
       </Link>
 
+      {falseText &&
+        <S.falseText>
+          <S.answerAgian onClick={handleTrue}>생각해보니 맞는 것 같아!</S.answerAgian>
+        </S.falseText>
+      }
+
       {defaultText &&
-        <section>
+        <S.BtnSection>
           <button onClick={handleTrue}>맞아</button>
           <button onClick={handleFalse}>...아닌데?</button>
-        </section>
+        </S.BtnSection>
       }
 
     </S.checkDiv>
