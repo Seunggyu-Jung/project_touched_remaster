@@ -23,6 +23,14 @@ export default function WrittingPage() {
     setSelectImage(e.target.value);
   }
 
+  const handleEmty = () => {
+    if (text.toString().trim().length === 0) {
+      alert("편지에 아무것도 작성하지 않으셨습니다.")
+    } else {
+      { `/image` }
+    }
+  }
+
 
   const writingAreaStyle = {
     fontSize: `${size}px`,
@@ -77,7 +85,7 @@ export default function WrittingPage() {
         <S.WritingArea name="letter" cols={100} rows={30} style={writingAreaStyle} value={text} onChange={e => setText(e.target.value)} placeholder='여러분이 전하고 싶은 마음의 소리를 적어보세요'></S.WritingArea>
       </S.WritingForm>
 
-      <Button previousLink='/info' nextLink='/image' />
+      <Button previousLink='/info' nextLink={handleEmty} />
 
     </S.WritingDiv>
   );
