@@ -11,12 +11,12 @@ export const testDiv = styled.div`
 export const testSection = styled.section`
   position: relative;
   max-width: 400px;
-  /* height: 400px; */
   margin: auto;
   justify-content: center;
   margin-top: 20px;
   border-radius: 10px;
   background-size: contain;
+  background-color: #ffff;
 
   @media (max-width: 400px) {
     max-width: 300px;

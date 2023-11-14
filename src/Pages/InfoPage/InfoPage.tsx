@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { userState, nameState } from '../recoil';
 import Button from '../../Common/Button/Button'
@@ -8,6 +8,17 @@ import * as S from './InfoPage.styled';
 export default function InfoPage() {
   const [user, setUser] = useRecoilState(userState);
   const [name, setName] = useRecoilState(nameState);
+  const navigate = useNavigate()
+
+  const handleEmty = () => {
+    if (user.toString().trim().length === 0) {
+      alert("당신의 성함을 입력해주세요!")
+    } else if (name.toString().trim().length === 0) {
+      alert("편지를 받을 분의 성함을 입력해주세요!")
+    } else {
+      navigate('/write')
+    }
+  }
 
   return (
     <S.InfoDiv>
@@ -27,7 +38,7 @@ export default function InfoPage() {
         />
       </form>
 
-      <Button previousLink='/background' nextLink='/write' />
+      <Button previousLink='/background' nextLink={handleEmty} />
     </S.InfoDiv>
   );
 }

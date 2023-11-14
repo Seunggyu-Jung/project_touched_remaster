@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { textState, fontState, sizeState, textBackState } from '../recoil';
 import Button from '../../Common/Button/Button'
@@ -7,14 +7,12 @@ import * as S from './Wrtiting.styled';
 import { img1, img2, img3, img4, img5 } from '../../img/img';
 
 
-
-
-
 export default function WrittingPage() {
   const [text, setText] = useRecoilState(textState)
   const [font, setFont] = useRecoilState<string>(fontState)
   const [size, setSize] = useRecoilState<string>(sizeState)
   const [selectImage, setSelectImage] = useRecoilState<string>(textBackState);
+  const navigate = useNavigate()
 
   const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => { setFont(e.target.value) }
   const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => { setSize(e.target.value) }
@@ -27,7 +25,7 @@ export default function WrittingPage() {
     if (text.toString().trim().length === 0) {
       alert("편지에 아무것도 작성하지 않으셨습니다.")
     } else {
-      { `/image` }
+      navigate('/image')
     }
   }
 
