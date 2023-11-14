@@ -35,7 +35,7 @@ export default function CheckPage() {
     <S.checkDiv>
       {defaultText &&
         <S.textSection>
-          <p>안녕하세요, {name}! {user}님으로 부터 편지가 도착했습니다.</p>
+          <p>안녕하세요, {name}님!!  {user}님으로 부터 편지가 도착했습니다.</p>
           <p>{name}님 본인이 맞으실까요??</p>
         </S.textSection>
       }
