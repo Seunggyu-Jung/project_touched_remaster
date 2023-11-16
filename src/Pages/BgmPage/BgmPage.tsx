@@ -11,9 +11,23 @@ export default function BgmPage() {
   const [videoId, setVideoId] = useRecoilState(bgmState)
   const [inputValue, setInputValue] = useState('');
 
+  const extractVideoId = (url: string): string | null => {
+    const shortUrlMatch = url.match(/youtu\.be\/([^?]+)/)
+    if (shortUrlMatch) {
+      return shortUrlMatch[1];
+    }
+
+    const longUrlMatch = url.match(/[?&]v=([^&]+)/);
+    if (longUrlMatch) {
+      return longUrlMatch[1];
+    }
+
+    return null;
+  }
+
+
   const handleVideoId = () => {
-    const url = new URL(inputValue);
-    const videoID = url.searchParams.get('v');
+    const videoID = extractVideoId(inputValue)
     if (videoID !== null) {
       setVideoId(videoID);
     } else {
@@ -29,6 +43,16 @@ export default function BgmPage() {
   return (
     <S.bgmDiv>
       <h1>원하는 유튜브 bgm ID를 입력하는 페이지 입니다.</h1>
+      <S.bgmGuide>
+        <S.pcGuide>
+          <h2>1. PC버전으로 bgmID 입력하는 방법</h2>
+          <p>페이지 상단에 있는 페이지 주소(URL)을 복사해서 입력란에 붙여주세요.</p>
+        </S.pcGuide>
+        <S.mobileGuide>
+          <h2>2. 모바일 버전으로 bgmID입력하는 방법</h2>
+          <p>영상 하단의 공유 버튼을 클릭한 후, 링크복사를 한 뒤, 입력란에 붙여주세요.</p>
+        </S.mobileGuide>
+      </S.bgmGuide>
       <YouTube videoId={videoId}
         opts={{
           width: '300',
