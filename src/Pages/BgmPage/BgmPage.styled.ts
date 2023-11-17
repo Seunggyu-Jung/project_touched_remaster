@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { back } from '../../img/img';
 
 export const bgmGuide = styled.div`
   max-width: 400px;
@@ -8,20 +9,25 @@ export const bgmGuide = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  border-radius: 10px;
 `;
 
 export const pcGuide = styled.section`
   width: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 `;
 
 export const mobileGuide = styled.section`
   width: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+`;
+
+export const guideTitle = styled.h2`
+  margin: 0;
 `;
 
 export const bgmDiv = styled.div`
