@@ -8,8 +8,11 @@ export const bgmGuide = styled.div`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   border-radius: 10px;
+  background-image: url(${back});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 export const pcGuide = styled.section`
