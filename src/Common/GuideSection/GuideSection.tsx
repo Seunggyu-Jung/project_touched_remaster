@@ -15,15 +15,15 @@ export default function GuideSection(props: GuideProps) {
         <S.guideTitle>
           {props.title}
         </S.guideTitle>
-        <S.guideSection>
+        <S.guideSteps>
           {props.step1}
-        </S.guideSection>
-        <S.guideSection>
+        </S.guideSteps>
+        <S.guideSteps>
           {props.step2}
-        </S.guideSection>
-        <S.guideSection>
+        </S.guideSteps>
+        <S.guideSteps>
           {props.step3}
-        </S.guideSection>
+        </S.guideSteps>
       </S.guideDiv>
     </>
   )
