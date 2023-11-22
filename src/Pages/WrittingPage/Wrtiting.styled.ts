@@ -6,6 +6,10 @@ export const WritingDiv = styled.div`
   text-align: center;
 `;
 
+export const hideSection = styled.section`
+  display: block;
+`;
+
 export const WritingForm = styled.form`
   width: 400px;
   margin: auto;
