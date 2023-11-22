@@ -39,6 +39,7 @@ export default function TestPage() {
     backgroundContain: 'contain',
   };
 
+
   return (
     <S.testBody >
       <S.testDiv>
@@ -60,7 +61,7 @@ export default function TestPage() {
         {image.length > 0 &&
           <S.photoBox style={{ fontFamily: font }}>
             <h2>우리가 함께한 추억 모음집</h2>
-            <Carousel showArrows={true} selectedItem={image.length - 1} showStatus={false} showThumbs={false}>
+            <Carousel showArrows={true} selectedItem={0} showStatus={false} showThumbs={false}>
               {image.map((image, index) => (
                 <div key={index}>
                   <img src={image} style={{ width: 300, margin: 'auto', display: 'block', alignItems: 'center' }} />
