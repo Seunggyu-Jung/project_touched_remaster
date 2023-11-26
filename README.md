@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Project-Toched-Remaster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. 프로젝트 정의 :
 
-## Available Scripts
+- 2023년 5월에 vanilla JavaScript로 작업했던 편지 탬플릿인 ‘Project-Touched’를 편지 작성 페이지로 리마스터함
 
-In the project directory, you can run:
+## 2. 프로젝트 작업 취지 :
 
-### `npm start`
+- 기존에는 편지에 내용을 입력하기 위해서는 직접 코드 내에 편지 내용을 작성하는 **하드 코딩을 해야하는 불편사항**이 있어 **편지를 페이지내에서 작성 및 커스텀 할 수 있는 페이지로 리마스터** 하여 이를 해결하고자 프로젝트 진행
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 3. 프로젝트의 기능 :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 사용자가 원하는대로 웹페이지의 바탕색을 **그라데이션으로 커스텀 가능**함
+- 편지에 담길 content의 용량에 제한을 두지 않아 **원하는 양 만큼 텍스트 작성 가능**
+- 작성될 편지의 **폰트, 배경, 글자 크기를 커스텀**할 수 있는 기능 구현
+- **원하는 양만큼 이미지**를 업로드 가능하며, **carousel 방식**으로 편리하게 감상할 수 있는 기능 구현
+- **유튜브 URL 주소만 있으면 어느 영상이든 배경음으로 사용할 수 있는 커스텀 기능** 구현
 
-### `npm test`
+## 4. 프로젝트의 특징 :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React과의 호환성이 좋고 Redux보다 훨씬 가볍고 실용적인 **Recoil**을 사용하여 전역 상태 관리를 진행함
+- 현재 프론트 엔드 실무에 있어 객체 지향의 장점과 협업을 효율을 향상시켜주는 **TypeScript**를 주 언어로 사용하여 코드의 가독성및 에러를 최소화 시킴
+- 실제 협업환경과 유사한 작업환경을 구현하기 위해 **Code Convention을 규정**하여 이를 준수하며 commit 및 pull-request를 진행
+- react-youtube, react-responsive-carousel, react-colorful 등 **다양한 react library를 활용**하여 편지를 보다 더욱 다체롭게 커스텀할 수 있도록 제작함
+- 모바일을 통한 웹 접속 빈도가 높은 현제 트렌드에 맞춰 **모바일 친화적인** 방향으로 페이지를 제작함
+- **최대한의 변수처리**를 하여 **오류를 최소한**으로 하도록 작업
+- 다양한 연령층의 사용자 보다 손쉽게 사용할 수 있도록 각 페이지에 상세한 guide-section 작성하여 **접근성 향상**
