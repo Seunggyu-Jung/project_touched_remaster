@@ -17,7 +17,7 @@ export default function TestPage() {
   const bgm = useRecoilValue(bgmState)
 
   const handleCopyURL = () => {
-    const targetPath = '/check'
+    const targetPath = '/#/check'
     const githubDomain = 'https://seunggyu-jung.github.io'
     const fullURL = githubDomain + targetPath
 

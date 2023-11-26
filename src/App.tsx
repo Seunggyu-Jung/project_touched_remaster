@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import FirstPage from './Pages/FirstPage/FirstPage';
 import InfoPage from './Pages/InfoPage/InfoPage';
 import WrittingPage from './Pages/WrittingPage/WrittingPage';
@@ -43,7 +43,7 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<FirstPage />}></Route>
@@ -55,7 +55,7 @@ function App() {
           <Route path="/check" element={<CheckPage />}></Route>
           <Route path="/bgm" element={<BgmPage />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
