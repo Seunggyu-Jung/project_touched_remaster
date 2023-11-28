@@ -13,7 +13,10 @@ export const hideSection = styled.section`
 export const WritingForm = styled.form`
   width: 400px;
   margin: auto;
-  margin-top: 20px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 
   @media (max-width: 500px) {
     max-width: 100%;
@@ -25,15 +28,16 @@ export const WritingArea = styled.textarea`
     outline: none;
   }
   display: block;
-  width: 100%;
-  height: 400px;
+  max-width: 100%;
+  height: 380px;
   resize: none;
+  margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-size: contain;
+  background: none;
+  border: 0;
 
   @media (max-width: 500px) {
-    max-height: 400px;
-    padding: 0;
+    width: 100%;
   }
 `;

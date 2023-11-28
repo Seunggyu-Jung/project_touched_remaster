@@ -46,9 +46,12 @@ export default function WrittingPage() {
   const writingAreaStyle = {
     fontSize: `${size}px`,
     fontFamily: font,
+  };
+
+  const writingFormStyle = {
     backgroundImage: `url(${selectImage})`,
     backgroundRepeat: 'no-repeat',
-  };
+  }
 
   const hideSectionStyle = {
     display: `${hideSection}`
@@ -101,7 +104,7 @@ export default function WrittingPage() {
       </S.hideSection>
 
 
-      <S.WritingForm>
+      <S.WritingForm style={writingFormStyle}>
         <S.WritingArea name="letter" cols={100} rows={30} style={writingAreaStyle} value={text} onChange={e => setText(e.target.value)} placeholder='여러분이 전하고 싶은 마음의 소리를 적어보세요'></S.WritingArea>
       </S.WritingForm>
 
