@@ -30,9 +30,10 @@ export const WritingArea = styled.textarea`
   display: block;
   max-width: 100%;
   height: 380px;
-  resize: none;
   margin-top: 20px;
-  margin-bottom: 20px;
+  resize: none;
+  box-sizing: border-box;
+  padding: 10px;
   border-radius: 10px;
   background: none;
   border: 0;
