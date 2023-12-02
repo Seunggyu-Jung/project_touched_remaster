@@ -41,7 +41,7 @@ function App() {
   `
 
   return (
-    <div>
+    <>
       <GlobalStyles />
       <HashRouter>
         <ScrollToTop />
@@ -56,7 +56,7 @@ function App() {
           <Route path="/bgm" element={<BgmPage />}></Route>
         </Routes>
       </HashRouter>
-    </div>
+    </>
   );
 }
 
