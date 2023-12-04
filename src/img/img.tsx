@@ -6,4 +6,6 @@ export { default as img5 } from './편지지5.avif';
 export { default as guide1 } from './Frame 1.svg';
 export { default as guide2 } from './Frame4.svg';
 export { default as guide3 } from './Frame 5.svg';
+export { default as heart } from './heart1.png'
+export { default as github } from './icon-github.svg'
 export { default as back } from './guideBack.avif'
