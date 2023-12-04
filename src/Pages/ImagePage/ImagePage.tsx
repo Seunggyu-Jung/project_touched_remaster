@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './ImagePage.styled';
 import { Carousel } from 'react-responsive-carousel';
-import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { imageState } from '../recoil';
 import Button from '../../Common/Button/Button'
