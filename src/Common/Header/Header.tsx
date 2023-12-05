@@ -8,6 +8,7 @@ export default function Header() {
 
   const [menuText, setMenuText] = useState("메뉴 펼치기")
   const [clickMenu, setClickMenu] = useState(false);
+  const [menuDefault, setMenuDefault] = useState(false);
 
   const handleMenu = () => {
     if (clickMenu === false) {
@@ -17,7 +18,9 @@ export default function Header() {
       setClickMenu(false)
       setMenuText("메뉴 펼치기")
     }
+    setMenuDefault(true);
   }
+
 
   return (
     <>
@@ -27,9 +30,13 @@ export default function Header() {
           <h1>감동 프로젝트</h1>
           <div>
             <S.menuContainer>
-              <S.menuButton onClick={handleMenu}>{menuText}</S.menuButton>
-              {clickMenu &&
-                <S.headerUl>
+              <S.menuButton onClick={handleMenu}><a className="menu-trigger" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a></S.menuButton>
+              {menuDefault &&
+                <S.headerUl menuVisible={clickMenu}>
                   <li> <S.headerLink to="/" >처음</S.headerLink></li>
                   <li><S.headerLink to="/background">배경</S.headerLink></li>
                   <li><S.headerLink to="/info">정보</S.headerLink></li>
