@@ -11,6 +11,7 @@ import { heart } from '../../img/img';
 
 export default function FirstPage() {
 
+
   const imageArray = [guide2, guide3, img2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,9 +52,8 @@ export default function FirstPage() {
             <S.buttonImage src={heart} ></S.buttonImage>
           </S.mainButton>
         </Link>
-      </S.mainDiv>
       <Footer />
+    </S.mainDiv>
     </>
-
   );
 }
