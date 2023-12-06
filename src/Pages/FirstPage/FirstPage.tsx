@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
 import * as S from './FirstPage.styled';
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
+import { guide2 } from '../../img/img';
+import { guide3 } from '../../img/img';
+import { img2 } from '../../img/img';
+import { heart } from '../../img/img';
 
 export default function FirstPage() {
 
