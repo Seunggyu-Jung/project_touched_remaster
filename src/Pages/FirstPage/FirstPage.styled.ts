@@ -3,8 +3,8 @@ import { styled } from 'styled-components';
 export const mainDiv = styled.div`
   width: auto;
   height: auto;
-  min-height: calc(100% - 200px);
-  padding-bottom: 200px;
+  min-height: calc(100% - 100px);
+  padding-bottom: 100px;
   text-align: center;
   background-color: #ffff;
 `;
