@@ -17,11 +17,12 @@ export const header = styled.header`
   display: flex;
   justify-content: space-between;
   text-align: center;
-  position: fixed;
-  z-index: 1;
+  position: relative;
 
   @media (max-width: 500px) {
     width: 100%;
+    position: fixed;
+    z-index: 1;
   }
 `;
 
@@ -42,7 +43,12 @@ export const menuButton = styled.button`
   background-color: salmon;
   border: 0;
   border-radius: 10px 10px 10px 10px;
-  z-index: 1;
+  z-index: 2;
+
+  :focus {
+    border: 0;
+    outline: none;
+  }
 
   .menu-trigger {
   }
@@ -80,8 +86,6 @@ export const menuButton = styled.button`
     bottom: 0;
   }
 
-  /* type-01 */
-  /* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
   .menu-trigger.active-1 span:nth-of-type(1) {
     -webkit-transform: translateY(20px) rotate (-45deg);
     transform: translateY(20px) rotate(-45deg);
@@ -103,6 +107,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
   list-style: none;
   background-color: #ffff;
   border-radius: 0 0 10px 10px;
+  z-index: 1;
 
   @keyframes dropdown {
     0% {
