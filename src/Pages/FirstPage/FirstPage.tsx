@@ -48,15 +48,8 @@ export default function FirstPage() {
           </S.mainButton>
         </Link>
       </S.mainDiv>
-  return (
-    <S.mainDiv>
-      <Header />
-      <h1>스타트 페이지</h1>
-      <p>감사한 분에게 여러분만의 편지를 만들어 마음을 전달해봐요</p>
-      <Link to="/background">
-        <button>편지 작성하러 이동</button>
-      </Link>
       <Footer />
     </S.mainDiv>
+    </>
   );
 }
