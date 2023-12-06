@@ -52,8 +52,8 @@ export default function FirstPage() {
             <S.buttonImage src={heart} ></S.buttonImage>
           </S.mainButton>
         </Link>
-      <Footer />
     </S.mainDiv>
+      <Footer />
     </>
   );
 }
