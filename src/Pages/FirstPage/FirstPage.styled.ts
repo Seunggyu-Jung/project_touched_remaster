@@ -2,9 +2,10 @@ import { styled } from 'styled-components';
 
 export const mainDiv = styled.div`
   width: auto;
-  margin-top: 80px;
+  height: auto;
+  min-height: calc(100% - 200px);
+  padding-bottom: 200px;
   text-align: center;
-
   background-color: #ffff;
 `;
 
