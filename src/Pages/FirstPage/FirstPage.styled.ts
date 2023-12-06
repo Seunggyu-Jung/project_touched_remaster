@@ -27,6 +27,28 @@ export const mainButton = styled.button`
   }
 `;
 
+export const carouselController = styled.section`
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 80px;
+  left: 200px;
+  background-color: #f2f2f2;
+  font-weight: bold;
+
+  button {
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+  }
+
+  @media (max-width: 500px) {
+    bottom: 40px;
+    left: 150px;
+  }
+`;
+
 export const buttonImage = styled.img`
   width: 100%;
   height: 100%;
