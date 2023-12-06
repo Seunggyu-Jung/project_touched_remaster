@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Carousel } from 'react-responsive-carousel';
 import * as S from './FirstPage.styled';
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
-import { guide2 } from '../../img/img';
-import { guide3 } from '../../img/img';
-import { img2 } from '../../img/img';
-import { heart } from '../../img/img';
 
 export default function FirstPage() {
+
 
   const imageArray = [guide2, guide3, img2];
 
@@ -52,8 +48,15 @@ export default function FirstPage() {
           </S.mainButton>
         </Link>
       </S.mainDiv>
+  return (
+    <S.mainDiv>
+      <Header />
+      <h1>스타트 페이지</h1>
+      <p>감사한 분에게 여러분만의 편지를 만들어 마음을 전달해봐요</p>
+      <Link to="/background">
+        <button>편지 작성하러 이동</button>
+      </Link>
       <Footer />
-    </>
-
+    </S.mainDiv>
   );
 }
