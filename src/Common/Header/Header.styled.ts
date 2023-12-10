@@ -7,11 +7,11 @@ export const headerWrapper = styled.div`
   width: 100%;
   height: 80px;
   margin: auto;
-  background-color: #ffff;
+  background-color: none;
 `;
 
 export const header = styled.header`
-  background-color: #ffff;
+  background-color: none;
   width: calc(100% - 600px);
   height: 80px;
   display: flex;
@@ -23,6 +23,11 @@ export const header = styled.header`
     width: 100%;
     position: fixed;
     z-index: 1;
+    background-color: #fff;
+
+    h1 {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -105,7 +110,6 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
   display: flex;
   flex-direction: column;
   list-style: none;
-  background-color: #ffff;
   border-radius: 0 0 10px 10px;
   z-index: 1;
 
@@ -115,6 +119,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
     }
     100% {
       transform: translateY(0);
+      background-color: #ffff;
     }
   }
 
@@ -124,6 +129,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
     }
     100% {
       transform: translateY(-100%);
+      background-color: none;
     }
   }
 

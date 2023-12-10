@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
 import { createGlobalStyle } from 'styled-components'
-import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import Button from '../../Common/Button/Button';
 import { backgroundState } from '../recoil';
@@ -34,7 +33,7 @@ export default function BackgroundPage() {
   return (
     <>
       <GlobalStyles />
-      <Header />
+      <Header title='Background Page' />
       <S.backgroundDiv >
         <h1>편지의 배경을 선택하는 페이지 입니다.</h1>
         <Guide title='편지지의 그라데이션 배경을 설정하는 방법' step1='1. 원하시는 색을 클릭하고 색 더하기를 눌러보세요' step2='2. 색상의 반전을 원하시면 색 반전 버튼을 클릭하시면 됩니다.'
