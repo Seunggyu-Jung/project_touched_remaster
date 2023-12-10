@@ -28,7 +28,7 @@ export default function FirstPage() {
   return (
     <>
       <S.mainDiv>
-        <Header />
+        <Header title='감동 프로젝트' />
         <S.mainSection>
           <Carousel showArrows={false} showStatus={false} autoPlay={true} infiniteLoop={true} interval={3000} showThumbs={false} showIndicators={false} stopOnHover={false} selectedItem={currentIndex}  >
             {imageArray.map((image, index) => (
@@ -52,6 +52,7 @@ export default function FirstPage() {
             <S.buttonImage src={heart} ></S.buttonImage>
           </S.mainButton>
         </Link>
+        <p>클릭해서 편지를 작성해봐요!</p>
       </S.mainDiv>
       <Footer />
     </>
