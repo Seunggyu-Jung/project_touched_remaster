@@ -13,19 +13,19 @@ const Button: React.FC<ButtonProps> = (props) => {
     <div>
       <S.btnSection>
         <Link to={props.previousLink}>
-          <button>이전</button>
+          <S.btnButton>이전</S.btnButton>
         </Link>
 
         {typeof props.nextLink === 'string' ? (
           <Link to={props.nextLink}>
-            <button>다음</button>
+            <S.btnButton>다음</S.btnButton>
           </Link>
         ) : typeof props.nextLink === 'boolean' ? (
           props.nextLink ? (
-            <button>다음</button>
+            <S.btnButton>다음</S.btnButton>
           ) : null
         ) : typeof props.nextLink === 'function' ? (
-          <button onClick={props.nextLink}>다음</button>
+          <S.btnButton onClick={props.nextLink}>다음</S.btnButton>
         ) : null}
       </S.btnSection>
     </div>
