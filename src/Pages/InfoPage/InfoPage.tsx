@@ -5,6 +5,8 @@ import { userState, nameState } from '../recoil';
 import Button from '../../Common/Button/Button'
 import Guide from '../../Common/GuideSection/GuideSection';
 import Modal from '../../Common/Modal/Modal';
+import Header from '../../Common/Header/Header';
+import Footer from '../../Common/Footer/Footer';
 import * as S from './InfoPage.styled';
 import * as M from '../../Common/Modal/ModalBox.styled';
 
@@ -31,31 +33,55 @@ export default function InfoPage() {
     }
   }
 
+  const checkStyle1 = () => {
+    if (user.toString().trim().length === 0) {
+      return { color: "red", checkText: "필수!", border: "0.5px solid salmon" };
+    } else {
+      return { color: "#00c3c1", checkText: "V", border: "0.5px solid #00c3c1" };
+    }
+  }
+
+  const checkStyle2 = () => {
+    if (name.toString().trim().length === 0) {
+      return { color: "red", checkText: "필수!", border: "0.5px solid salmon" };
+    } else {
+      return { color: "#00c3c1", checkText: "V", border: "0.5px solid #00c3c1" };
+    }
+  }
+
   return (
     <>
+      <Header title='InfoPage' />
       <S.InfoDiv>
         <h1>편지에 작성할 기본 정보들을 입력하는 단계입니다.</h1>
         <Guide title='발신자와 수신자 설정 방법' step1='1. 상단에 있는 칸에는 발신자 분의 성함을 입력해주세요.' step2='2. 수신 하단에 있는 칸에는 수신자 분의 성함을 입력해주세요.'
           step3='*해당 정보는 필수 정보이기에 꼭 입력해주세요!!' ></Guide>
 
-        <form>
-          <p>당신의 성함은?</p>
-          <input
-            type="text"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-            placeholder='발신자 성함'
-          />
-          <p>이 편지를 받고 감동할 분의 성함은?</p>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder='수신자 성함'
-          />
-        </form>
+        <S.InfoForm>
+          <p>Q1. 당신의 성함을 적어주세요!</p>
+          <label >
+            <S.InfoInput
+              type="text"
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
+              placeholder='발신자 성함'
+            />
+            <S.InfoCheck style={{ color: checkStyle1().color, border: checkStyle1().border }}>{checkStyle1().checkText}</S.InfoCheck>
+          </label>
+          <p>Q2. 편지를 받을 분의 성함을 적어주세요!</p>
+          <label htmlFor="">
+            <S.InfoInput
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder='수신자 성함'
+            />
+            <S.InfoCheck2 style={{ color: checkStyle2().color, border: checkStyle2().border }}>{checkStyle2().checkText}</S.InfoCheck2>
+          </label>
+          <Button previousLink='/background' nextLink={handleEmty} />
+        </S.InfoForm>
 
-        <Button previousLink='/background' nextLink={handleEmty} />
+
       </S.InfoDiv>
       {isModalOpen &&
         <Modal closeModal={closeModal}>
@@ -66,6 +92,7 @@ export default function InfoPage() {
           </M.modalContainer>
         </Modal>
       }
+      <Footer />
     </>
 
   );
