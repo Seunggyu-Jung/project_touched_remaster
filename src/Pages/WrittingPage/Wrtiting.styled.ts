@@ -3,11 +3,54 @@ import { styled } from 'styled-components';
 export const WritingDiv = styled.div`
   width: auto;
   margin-top: 80px;
+  height: auto;
+  min-height: calc(100% - 200px);
+  padding-bottom: 200px;
   text-align: center;
+`;
+
+export const hiddingBtn = styled.button`
+  margin-bottom: 20px;
+  border: 1px solid #5cffd1;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00c3c1;
+    color: #f2f2f2;
+    transition: 0.7s;
+  }
 `;
 
 export const hideSection = styled.section`
   display: block;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #f2f2f2;
+
+  select {
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: #00c3c1;
+      color: #f2f2f2;
+      transition: 0.5s;
+    }
+
+    option {
+      background-color: #5cffd1;
+      color: black;
+      outline: none;
+    }
+  }
 `;
 
 export const WritingForm = styled.form`
