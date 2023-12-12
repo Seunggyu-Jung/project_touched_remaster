@@ -46,9 +46,10 @@ export const hideSection = styled.section`
     }
 
     option {
-      background-color: #5cffd1;
+      background-color: #f2f2f2;
       color: black;
       outline: none;
+      border: 1px solid #5cffd1;
     }
   }
 `;
