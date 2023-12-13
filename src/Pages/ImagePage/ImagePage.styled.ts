@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const ImageDiv = styled.div`
   width: auto;
   margin-top: 80px;
+  height: auto;
+  min-height: calc(100% - 200px);
+  padding-bottom: 200px;
   text-align: center;
 `;
 
@@ -18,6 +21,9 @@ export const ImageInput = styled.input`
 
 export const ImageSection = styled.section`
   max-width: 400px;
-  display: block;
   margin: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #f2f2f2;
 `;
