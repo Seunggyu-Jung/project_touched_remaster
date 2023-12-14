@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             {menuDefault && (
               <S.headerUl menuVisible={clickMenu}>
                 <li>
-                  <S.headerLink to="/">처음</S.headerLink>
+                  <S.headerLink to="/">Welcom</S.headerLink>
                 </li>
                 <li>
                   <S.headerLink to="/background">배경</S.headerLink>

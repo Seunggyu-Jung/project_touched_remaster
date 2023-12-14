@@ -12,6 +12,21 @@ export const modalContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  a {
+    box-sizing: border-box;
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      background-color: #00c3c1;
+      color: #f2f2f2;
+      transition: 0.7s;
+    }
+  }
 `;
 
 export const modalAnchor = styled.button`
