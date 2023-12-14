@@ -36,5 +36,43 @@ export const guideTitle = styled.h2`
 export const bgmDiv = styled.div`
   width: auto;
   margin-top: 80px;
+  height: auto;
+  min-height: calc(100% - 200px);
+  padding-bottom: 200px;
   text-align: center;
+`;
+
+export const bgmSection = styled.section`
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #f2f2f2;
+
+  input {
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+  }
+
+  button {
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: #00c3c1;
+      color: #f2f2f2;
+      transition: 0.5s;
+    }
+  }
 `;
