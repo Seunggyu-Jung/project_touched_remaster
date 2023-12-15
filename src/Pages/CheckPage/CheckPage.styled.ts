@@ -10,7 +10,7 @@ export const textSection = styled.section`
   max-width: 400px;
   margin: auto;
   border-radius: 10px;
-  border: 1px solid transparent;
+  border: 1px solid #5cffd1;
   position: relative;
   background-color: #ffff;
 
@@ -26,26 +26,42 @@ export const textSection = styled.section`
   }
 `;
 
-export const guideImg = styled.img`
-  transition: opacity 1s ease-in-out;
-`;
+export const guideImg = styled.img``;
 
 export const BtnSection = styled.section`
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
-`;
 
-export const falseText = styled.section`
-  max-width: 300px;
-  margin: auto;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background-color: #ffff;
+  button {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #00c3c1;
+      color: #f2f2f2;
+      transition: 0.7s;
+    }
+  }
 `;
 
 export const answerAgian = styled.button`
-  border: 0;
-  background-color: transparent;
+  max-width: 300px;
+  margin: auto;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #5cffd1;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00c3c1;
+    color: #f2f2f2;
+    transition: 0.7s;
+  }
 `;
