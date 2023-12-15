@@ -41,8 +41,11 @@ export default function BackgroundPage() {
         <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
           <HexColorPicker color={color} onChange={setColor} />
         </section>
-        <button onClick={handleColorArray}>색 더하기</button>
-        <button onClick={reverseColorArray}>색 반전</button>
+        <S.controllSection>
+          <button onClick={handleColorArray}>색 더하기</button>
+          <button onClick={reverseColorArray}>색 반전</button>
+        </S.controllSection>
+
 
         <Button previousLink='/' nextLink='/info' />
 
