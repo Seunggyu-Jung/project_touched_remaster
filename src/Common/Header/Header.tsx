@@ -7,17 +7,14 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
-  const [menuText, setMenuText] = useState("메뉴 펼치기");
   const [clickMenu, setClickMenu] = useState(false);
   const [menuDefault, setMenuDefault] = useState(false);
 
   const handleMenu = () => {
     if (clickMenu === false) {
       setClickMenu(true);
-      setMenuText("메뉴 접기");
     } else {
       setClickMenu(false);
-      setMenuText("메뉴 펼치기");
     }
     setMenuDefault(true);
   };
