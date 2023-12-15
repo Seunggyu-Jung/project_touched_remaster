@@ -45,7 +45,7 @@ export const menuButton = styled.button`
   height: 80px;
   position: absolute;
   right: 0;
-  background-color: salmon;
+  background-color: #5cffd1;
   border: 0;
   border-radius: 10px 10px 10px 10px;
   z-index: 2;
@@ -75,7 +75,7 @@ export const menuButton = styled.button`
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 4px;
   }
 
@@ -116,6 +116,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
   @keyframes dropdown {
     0% {
       transform: translateY(-100%);
+      display: none;
     }
     100% {
       transform: translateY(0);
@@ -130,6 +131,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
     100% {
       transform: translateY(-100%);
       background-color: none;
+      display: none;
     }
   }
 
@@ -150,7 +152,7 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
       display: block;
       width: 0;
       height: 2px;
-      background-color: salmon;
+      background-color: #5cffd1;
       transition: width 0.2s ease-out;
     }
 

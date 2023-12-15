@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { userState, nameState } from '../recoil'
 import { useRecoilValue } from 'recoil'
 import { guide1, guide2, guide3 } from '../../img/img'
@@ -56,9 +56,7 @@ export default function CheckPage() {
       </Link>
 
       {falseText &&
-        <S.falseText>
-          <S.answerAgian onClick={handleTrue}>생각해보니 맞는 것 같아!</S.answerAgian>
-        </S.falseText>
+        <S.answerAgian onClick={handleTrue}>생각해보니 맞는 것 같아!</S.answerAgian>
       }
 
       {defaultText &&
