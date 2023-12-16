@@ -6,6 +6,7 @@ import Button from '../../Common/Button/Button'
 import Guide from '../../Common/GuideSection/GuideSection';
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
+import Wrapper from '../../Common/Wrapper/Wrapper';
 import Modal from '../../Common/Modal/Modal';
 import * as M from '../../Common/Modal/ModalBox.styled';
 import * as S from './Wrtiting.styled';
@@ -56,6 +57,7 @@ export default function WrittingPage() {
   };
 
   const writingFormStyle = {
+    backgroundColor: '#f2f2f2',
     backgroundImage: `url(${selectImage})`,
     backgroundRepeat: 'no-repeat',
   }
@@ -67,12 +69,12 @@ export default function WrittingPage() {
   return (
     <>
       <Header title='WritingPage' />
-      <S.WritingDiv>
+      <Wrapper>
         <link
           href={`https://fonts.googleapis.com/css?family=${font}`}
           rel="stylesheet"
         />
-        <h1>편지에 작성할 편지내용을 입력하는 단계입니다.</h1>
+        <h1>편지를 작성하는 단계입니다.</h1>
         <Guide title='편지 작성 가이드' step1='1. 원하시는 글자의 폰트와 크기, 편지지의 배경을 선택해주세요.' step2='2. 폰트 설정 숨기기 버튼을 누르시고 하단의 편지지에 편지를 작성하시면 됩니다.' step3='*글자 수에는 제한은 없지만, 글자 크기는 되도록 24px로 하시는 것을 권장드립니다.'></Guide>
 
         <S.hiddingBtn onClick={handleSettingHide}>{hide}</S.hiddingBtn>
@@ -117,8 +119,7 @@ export default function WrittingPage() {
         </S.WritingForm>
 
         <Button previousLink='/info' nextLink={handleEmty} />
-
-      </S.WritingDiv>
+      </Wrapper>
       {isModalOpen &&
         <Modal closeModal={closeModal}>
           <M.modalContainer>

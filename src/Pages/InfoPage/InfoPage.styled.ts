@@ -1,14 +1,5 @@
 import { styled } from 'styled-components';
 
-export const InfoDiv = styled.div`
-  width: auto;
-  margin-top: 80px;
-  height: auto;
-  min-height: calc(100% - 200px);
-  padding-bottom: 200px;
-  text-align: center;
-`;
-
 export const InfoForm = styled.form`
   max-width: 400px;
   margin: auto;

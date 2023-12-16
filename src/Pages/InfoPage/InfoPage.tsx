@@ -7,6 +7,7 @@ import Guide from '../../Common/GuideSection/GuideSection';
 import Modal from '../../Common/Modal/Modal';
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
+import Wrapper from '../../Common/Wrapper/Wrapper';
 import * as S from './InfoPage.styled';
 import * as M from '../../Common/Modal/ModalBox.styled';
 
@@ -52,7 +53,7 @@ export default function InfoPage() {
   return (
     <>
       <Header title='InfoPage' />
-      <S.InfoDiv>
+      <Wrapper>
         <h1>편지에 작성할 기본 정보들을 입력하는 단계입니다.</h1>
         <Guide title='발신자와 수신자 설정 방법' step1='1. 상단에 있는 칸에는 발신자 분의 성함을 입력해주세요.' step2='2. 수신 하단에 있는 칸에는 수신자 분의 성함을 입력해주세요.'
           step3='*해당 정보는 필수 정보이기에 꼭 입력해주세요!!' ></Guide>
@@ -80,9 +81,7 @@ export default function InfoPage() {
           </label>
           <Button previousLink='/background' nextLink={handleEmty} />
         </S.InfoForm>
-
-
-      </S.InfoDiv>
+      </Wrapper>
       {isModalOpen &&
         <Modal closeModal={closeModal}>
           <M.modalContainer>

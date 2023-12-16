@@ -41,6 +41,7 @@ export const carouselController = styled.section`
     border: 0;
     background-color: transparent;
     font-size: 24px;
+    cursor: pointer;
   }
 
   @media (max-width: 500px) {

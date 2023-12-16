@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { guide2 } from '../../img/img';
 
 export const headerWrapper = styled.div`
   display: flex;
@@ -31,9 +32,40 @@ export const header = styled.header`
   }
 `;
 
+export const homeBtn = styled(Link)`
+  width: 70px;
+  position: relative;
+  background-image: url(${guide2});
+  background-position: center;
+  background-size: cover;
+  :hover {
+    & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+`;
+
+export const hoveredText = styled.p`
+  height: 100%;
+  visibility: visible;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: black;
+`;
+
 export const menuContainer = styled.section`
   height: 80px;
   display: flex;
+
   @media (max-width: 500px) {
     width: 80px;
     flex-direction: column;
@@ -49,6 +81,7 @@ export const menuButton = styled.button`
   border: 0;
   border-radius: 10px 10px 10px 10px;
   z-index: 2;
+  cursor: pointer;
 
   :focus {
     border: 0;
@@ -141,8 +174,9 @@ export const headerUl = styled.ul<{ menuVisible: boolean }>`
       : 'scrollup 0.4s ease-in forwards'};
 
   & {
-    padding: 0;
     position: absolute;
+    box-sizing: border-box;
+    padding: 10px 0;
     top: 65px;
     right: 0;
     width: 80px;

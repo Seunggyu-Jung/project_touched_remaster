@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const ImageDiv = styled.div`
-  width: auto;
-  margin-top: 80px;
-  height: auto;
-  min-height: calc(100% - 200px);
-  padding-bottom: 200px;
-  text-align: center;
-`;
-
 export const DeleteBtn = styled.button`
   position: absolute;
   top: 0;

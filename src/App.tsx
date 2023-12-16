@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import FirstPage from './Pages/FirstPage/FirstPage';
 import InfoPage from './Pages/InfoPage/InfoPage';
@@ -25,6 +24,15 @@ function App() {
     width: 100%;
     height: 100%;
     word-break: keep-all;
+    font-family: 'Cafe24Dongdong';
+
+    @font-face {
+    font-family: 'Cafe24Dongdong';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Dongdong.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
   }
 
   body::before {
