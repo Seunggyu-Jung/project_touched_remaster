@@ -16,6 +16,8 @@ export const btnButton = styled.button`
   border: 1px solid #5cffd1;
   border-radius: 10px;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
 
   &:hover {
     background-color: #00c3c1;

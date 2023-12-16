@@ -1,5 +1,4 @@
 import { useEffect, MouseEvent } from 'react';
-import React from 'react';
 import * as S from './Modal.styled';
 import { ReactNode } from 'react';
 
