@@ -33,15 +33,6 @@ export const guideTitle = styled.h2`
   margin: 0;
 `;
 
-export const bgmDiv = styled.div`
-  width: auto;
-  margin-top: 80px;
-  height: auto;
-  min-height: calc(100% - 200px);
-  padding-bottom: 200px;
-  text-align: center;
-`;
-
 export const bgmSection = styled.section`
   display: block;
   max-width: 400px;

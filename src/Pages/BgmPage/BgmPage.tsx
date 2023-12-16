@@ -6,12 +6,12 @@ import Modal from '../../Common/Modal/Modal'
 import Button from '../../Common/Button/Button'
 import Header from '../../Common/Header/Header'
 import Footer from '../../Common/Footer/Footer'
+import Wrapper from '../../Common/Wrapper/Wrapper'
 import { guide2 } from '../../img/img'
 import { guide3 } from '../../img/img'
 import * as S from './BgmPage.styled'
 import * as M from '../../Common/Modal/ModalBox.styled';
 import YouTube from 'react-youtube'
-import { url } from 'inspector'
 
 
 export default function BgmPage() {
@@ -82,16 +82,16 @@ export default function BgmPage() {
 
   return (
     <>
-      <Header title='BgmPage' />
-      <S.bgmDiv>
-        <h1>원하는 유튜브 bgm ID를 입력하는 페이지 입니다.</h1>
+      <Header title='BGM_Page' />
+      <Wrapper>
+        <h1>BGM을 등록하는 페이지 입니다.</h1>
         <S.bgmGuide>
           <S.pcGuide>
-            <S.guideTitle>1. PC버전으로 bgmID 입력하는 방법</S.guideTitle>
+            <S.guideTitle>1. PC버전으로 BGM ID 입력하는 방법</S.guideTitle>
             <p> - 페이지 상단에 있는 페이지 주소(URL)을 복사해서 입력란에 붙여주세요.</p>
           </S.pcGuide>
           <S.mobileGuide>
-            <S.guideTitle>2. 모바일 버전으로 bgmID입력하는 방법</S.guideTitle>
+            <S.guideTitle>2. 모바일 버전으로 BGM ID입력하는 방법</S.guideTitle>
             <p> - 영상 하단의 공유 버튼을 클릭한 후, 링크복사를 한 뒤, 입력란에 붙여주세요.</p>
           </S.mobileGuide>
         </S.bgmGuide>
@@ -116,8 +116,7 @@ export default function BgmPage() {
 
 
         <Button previousLink='/image' nextLink={handleEmty} />
-
-      </S.bgmDiv>
+      </Wrapper>
       {isModalOpen &&
         <Modal closeModal={closeModal}>
           <M.modalContainer style={{ backgroundImage: modalBackground, backgroundSize: 'cover', backgroundPosition: 'center center' }}>

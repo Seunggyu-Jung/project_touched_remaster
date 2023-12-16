@@ -1,14 +1,5 @@
 import { styled } from 'styled-components';
 
-export const WritingDiv = styled.div`
-  width: auto;
-  margin-top: 80px;
-  height: auto;
-  min-height: calc(100% - 200px);
-  padding-bottom: 200px;
-  text-align: center;
-`;
-
 export const hiddingBtn = styled.button`
   margin-bottom: 20px;
   border: 1px solid #5cffd1;
