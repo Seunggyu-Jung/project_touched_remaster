@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import * as S from './Header.styled';
-import { guide2 } from '../../img/img';
 
 interface HeaderProps {
   title: string;
@@ -19,15 +18,17 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
     setMenuDefault(true);
   };
 
+
   return (
     <>
       <S.headerWrapper>
         <S.header>
-          <img src={guide2} alt="" />
+          <S.homeBtn to="/">
+            <S.hoveredText>Welcome 페이지로 이동하기</S.hoveredText></S.homeBtn>
           <h1>{title}</h1>
           <S.menuContainer>
             <S.menuButton onClick={handleMenu}>
-              <div className="menu-trigger">
+              <div className={`menu-trigger ${clickMenu ? 'active-1' : ''}`}>
                 <span></span>
                 <span></span>
                 <span></span>
