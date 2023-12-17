@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { userState, nameState, textState, fontState, sizeState, imageState, textBackState, bgmState } from '../recoil';
 import { useRecoilValue } from 'recoil';
 import { Carousel } from 'react-responsive-carousel';
-import YouTube from 'react-youtube'
+import YouTube from 'react-youtube';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import * as S from './TestPage.styled'
+import Modal from '../../Common/Modal/Modal'
+import * as S from './TestPage.styled';
+import * as M from '../../Common/Modal/ModalBox.styled';
 
 export default function TestPage() {
   const user = useRecoilValue(userState);
@@ -13,8 +15,11 @@ export default function TestPage() {
   const font = useRecoilValue(fontState);
   const size = useRecoilValue(sizeState);
   const image = useRecoilValue(imageState);
-  const background = useRecoilValue(textBackState)
-  const bgm = useRecoilValue(bgmState)
+  const background = useRecoilValue(textBackState);
+  const bgm = useRecoilValue(bgmState);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => setIsModalOpen(false);
 
   const handleCopyURL = () => {
     const targetPath = '/#/check'
@@ -23,7 +28,7 @@ export default function TestPage() {
 
     navigator.clipboard.writeText(fullURL)
       .then(() => {
-        alert('편지가 잘 복사되었습니다. 받으실 분에게 보내보세요!')
+        setIsModalOpen(true);
       })
       .catch((error) => {
         console.log('복사에 오류가 있습니다.', error)
@@ -41,7 +46,7 @@ export default function TestPage() {
 
 
   return (
-    <S.testBody >
+    <>
       <S.testDiv>
         <link
           href={`https://fonts.googleapis.com/css?family=${font}`}
@@ -81,8 +86,17 @@ export default function TestPage() {
             }
           }}
         />
-        <button onClick={handleCopyURL}>전송</button>
+        <button onClick={handleCopyURL}>url 복사</button>
+        {isModalOpen &&
+          <Modal closeModal={closeModal}>
+            <M.modalContainer>
+              <h2>url이 성공적으로 복사되었습니다!</h2>
+              <p>{name}에게 보내보세요!</p>
+              <p>닫기 : 빈 화면 클릭 or ESC</p>
+            </M.modalContainer>
+          </Modal>
+        }
       </S.testDiv>
-    </S.testBody>
+    </>
   );
 }

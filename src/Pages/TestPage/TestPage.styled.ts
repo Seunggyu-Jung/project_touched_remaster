@@ -1,11 +1,27 @@
 import { styled, keyframes } from 'styled-components';
 
-export const testBody = styled.body``;
-
 export const testDiv = styled.div`
   width: auto;
   margin-top: 80px;
   text-align: center;
+
+  button {
+    margin: 20px 0;
+    border: 1px solid #5cffd1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+
+    &:hover {
+      background-color: #00c3c1;
+      color: #f2f2f2;
+      transition: 0.5s;
+    }
+  }
 `;
 
 export const testSection = styled.section`
