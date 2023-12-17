@@ -39,6 +39,8 @@ export const BtnSection = styled.section`
     height: 30px;
     border: 1px solid #5cffd1;
     border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
     cursor: pointer;
 
     &:hover {

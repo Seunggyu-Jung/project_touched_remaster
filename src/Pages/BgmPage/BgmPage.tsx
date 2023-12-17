@@ -71,7 +71,7 @@ export default function BgmPage() {
     if (videoID !== null) {
       setVideoId(videoID);
     } else {
-      setVideoId('BDY7VAxGb24');
+      setVideoId('');
     }
   }
 
