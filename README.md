@@ -29,3 +29,7 @@
 ## 3. 한계 :
 - 서버가 구축이 되어있지 않아, 단지 local환경에서만 저장이 가능하다는 한계가 존재
 - 이는 추후에 firebase를 통해 서버리스 메일링을 할 수 있도록 리펙토링할 예정
+
+## 4. lighthouse 점수 💡
+![스크린샷(66)](https://github.com/Seunggyu-Jung/project_touched_remaster/assets/106158869/8037ccfd-ed2f-4bba-b025-17c46c7aaa65)
+
