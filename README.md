@@ -1,4 +1,6 @@
 # Project-Toched-Remaster : 편지 작성 홈페이지
+![스크린샷(64)](https://github.com/Seunggyu-Jung/project_touched_remaster/assets/106158869/f87a16e3-01dc-4629-b251-f1c7f30f4594)
+
 
 # 홈페이지 링크 : https://project-touched-remaster.vercel.app/
 
